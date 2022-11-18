@@ -1,2 +1,1 @@
-# AQ-Password-Generator
-Creating a random password generator
+# Password Generator Starter Code
