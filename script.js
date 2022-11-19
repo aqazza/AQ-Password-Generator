@@ -24,11 +24,15 @@ return Math.ceil(Math.random() * (max))
 }
 
 
-
+// The function to generate the password
 function generatePassword() {
 // Step 1 Ask how many characters the user want the password to be
 var passwordLength = prompt( "How long would you like to make your password(8-128)?", "12" );
-console.log(passwordLength);
+// If the password length is greater than the maximum length allowed then prompt will show that you need to redo it
+if (passwordLength > 128 || passwordLength < 8 ) {
+  alert("I told you how many characters you can use!")
+  return generatePassword()
+}
 // Step 2 Ask if the user wants uppercase
 var useUpperCase = confirm("Would you like to include uppercase letters in your password?")
 console.log(useUpperCase)
